@@ -1,0 +1,24 @@
+{
+  "name": "Géoportail Niger - SIATeG 2025",
+  "short_name": "Géoportail Niger",
+  "description": "Plateforme web intelligente pour l'accès aux données ouvertes du Niger",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["productivity", "utilities", "government"],
+  "lang": "fr",
+  "orientation": "portrait-primary"
+}
