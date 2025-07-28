@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, Search, Sun, Moon, Globe, User, LogOut, Settings } from 'lucide-react';
+import { Menu, Search, Sun, Moon, User, LogOut, Settings, Bell } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
+import LanguageSelector from '../Common/LanguageSelector';
 
 const Header = ({ onMenuClick }) => {
   const { user, logout } = useAuth();
   const { isDark, toggleTheme } = useTheme();
-  const { currentLanguage, changeLanguage, t } = useLanguage();
+  const { t } = useLanguage();
   const [showUserMenu, setShowUserMenu] = useState(false);
-  const [showLangMenu, setShowLangMenu] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -19,11 +19,6 @@ const Header = ({ onMenuClick }) => {
     setShowUserMenu(false);
   };
 
-  const languages = [
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'ha', name: 'Hausa', flag: '🇳🇪' },
-    { code: 'dj', name: 'Zarma', flag: '🇳🇪' }
-  ];
 
   return (
     <header className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors duration-300">
@@ -67,6 +62,15 @@ const Header = ({ onMenuClick }) => {
 
           {/* Actions utilisateur */}
           <div className="flex items-center space-x-3">
+            {/* Notifications */}
+            <button
+              className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors relative"
+              title={t('notifications')}
+            >
+              <Bell className="h-5 w-5" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full text-xs"></span>
+            </button>
+
             {/* Toggle thème */}
             <button
               onClick={toggleTheme}
@@ -77,35 +81,12 @@ const Header = ({ onMenuClick }) => {
             </button>
 
             {/* Sélecteur de langue */}
-            <div className="relative">
-              <button
-                onClick={() => setShowLangMenu(!showLangMenu)}
-                className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                title={t('change_language')}
-              >
-                <Globe className="h-5 w-5" />
-              </button>
-              
-              {showLangMenu && (
-                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        changeLanguage(lang.code);
-                        setShowLangMenu(false);
-                      }}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center space-x-3 ${
-                        currentLanguage === lang.code ? 'bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400' : 'text-gray-700 dark:text-gray-300'
-                      }`}
-                    >
-                      <span>{lang.flag}</span>
-                      <span>{lang.name}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            <LanguageSelector 
+              variant="dropdown" 
+              showFlag={true} 
+              showName={false}
+              position="bottom-right"
+            />
 
             {/* Menu utilisateur */}
             {user ? (
@@ -141,6 +122,15 @@ const Header = ({ onMenuClick }) => {
                     >
                       <User className="h-4 w-4" />
                       <span>{t('profile')}</span>
+                    </Link>
+                    
+                    <Link
+                      to="/settings"
+                      className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                      onClick={() => setShowUserMenu(false)}
+                    >
+                      <Settings className="h-4 w-4" />
+                      <span>{t('settings')}</span>
                     </Link>
                     
                     <button

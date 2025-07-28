@@ -8,6 +8,8 @@ import DataExplorer from './pages/DataExplorer';
 import Profile from './pages/Profile';
 import About from './pages/About';
 import Login from './pages/Login';
+import Settings from './pages/Settings';
+import Help from './pages/Help';
 import { AuthProvider } from './contexts/AuthContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { ThemeProvider } from './contexts/ThemeContext';
@@ -36,6 +38,8 @@ function App() {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/settings" element={<Settings />} />
+                    <Route path="/help" element={<Help />} />
                     <Route path='/chat' element={<Chatbot />} />
                   </Routes>
                 </main>

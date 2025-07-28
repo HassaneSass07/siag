@@ -1,47 +1,355 @@
 export const translations = {
   fr: {
-    // Navigation
+    // Navigation & Layout
     'dashboard': 'Tableau de bord',
     'map': 'Carte Interactive',
     'data': 'Explorateur de Données',
-    'profile': 'Profil', 
+    'profile': 'Profil',
     'about': 'À propos',
     'login': 'Connexion',
     'logout': 'Déconnexion',
+    'chat': 'Assistant IA',
+    'settings': 'Paramètres',
+    'help': 'Aide',
+    'home': 'Accueil',
     
-    // Dashboard
+    // Header & Navigation
     'welcome': 'Bienvenue sur le Géoportail du Niger',
-    'subtitle': 'Accès libre aux données ouvertes pour le développement',
-    'total_regions': 'Régions Totales',
-    'health_facilities': 'Centres de Santé',
-    'schools': 'Écoles',
-    'water_points': 'Points d\'Eau',
-    
-    // Search
-    'search_placeholder': 'Rechercher une ville, région ou donnée...',
+    'subtitle': 'Plateforme intelligente pour l\'accès aux données ouvertes',
+    'search_placeholder': 'Rechercher une ville, région, infrastructure...',
     'search': 'Rechercher',
     'filters': 'Filtres',
     'all_categories': 'Toutes catégories',
-    
-    // User
-    'welcome_user': 'Bienvenue',
     'toggle_theme': 'Changer le thème',
     'change_language': 'Changer la langue',
+    'user_menu': 'Menu utilisateur',
+    'notifications': 'Notifications',
     
-    // About
-    'about_title': 'À propos du Géoportail Niger',
-    'about_mission': 'Notre Mission',
-    'about_mission_text': 'Démocratiser l\'accès aux données publiques du Niger pour favoriser la transparence, l\'innovation et le développement participatif.',
+    // Dashboard
+    'total_regions': 'Régions Totales',
+    'health_facilities': 'Centres de Santé',
+    'schools': 'Établissements Scolaires',
+    'water_points': 'Points d\'Eau',
+    'power_stations': 'Centrales Électriques',
+    'population': 'Population',
+    'area': 'Superficie',
+    'density': 'Densité',
+    'development_index': 'Indice de Développement',
     
-    // Stats
+    // Access Indicators
     'education_access': 'Accès à l\'Éducation',
     'health_access': 'Accès à la Santé',
-    'water_access': 'Accès à l\'Eau',
-    'electricity_access': 'Accès à l\'Électricité'
+    'water_access': 'Accès à l\'Eau Potable',
+    'electricity_access': 'Accès à l\'Électricité',
+    'internet_access': 'Accès à Internet',
+    'road_access': 'Accès Routier',
+    
+    // Map & Geography
+    'regions': 'Régions',
+    'departments': 'Départements',
+    'communes': 'Communes',
+    'villages': 'Villages',
+    'capital': 'Capitale',
+    'urban_area': 'Zone Urbaine',
+    'rural_area': 'Zone Rurale',
+    'coordinates': 'Coordonnées',
+    'elevation': 'Altitude',
+    'climate': 'Climat',
+    
+    // Infrastructure Types
+    'hospital': 'Hôpital',
+    'health_center': 'Centre de Santé',
+    'clinic': 'Clinique',
+    'pharmacy': 'Pharmacie',
+    'university': 'Université',
+    'secondary_school': 'Lycée',
+    'primary_school': 'École Primaire',
+    'technical_school': 'École Technique',
+    'river': 'Fleuve',
+    'borehole': 'Forage',
+    'well': 'Puits',
+    'dam': 'Barrage',
+    'power_plant': 'Centrale Électrique',
+    'solar_farm': 'Parc Solaire',
+    'wind_farm': 'Parc Éolien',
+    'road': 'Route',
+    'bridge': 'Pont',
+    'airport': 'Aéroport',
+    'market': 'Marché',
+    
+    // Data & Statistics
+    'statistics': 'Statistiques',
+    'indicators': 'Indicateurs',
+    'trends': 'Tendances',
+    'analysis': 'Analyse',
+    'comparison': 'Comparaison',
+    'ranking': 'Classement',
+    'evolution': 'Évolution',
+    'projection': 'Projection',
+    'correlation': 'Corrélation',
+    'average': 'Moyenne',
+    'median': 'Médiane',
+    'minimum': 'Minimum',
+    'maximum': 'Maximum',
+    'percentage': 'Pourcentage',
+    'growth_rate': 'Taux de Croissance',
+    
+    // Time & Dates
+    'today': 'Aujourd\'hui',
+    'yesterday': 'Hier',
+    'this_week': 'Cette semaine',
+    'this_month': 'Ce mois',
+    'this_year': 'Cette année',
+    'last_week': 'Semaine dernière',
+    'last_month': 'Mois dernier',
+    'last_year': 'Année dernière',
+    'january': 'Janvier',
+    'february': 'Février',
+    'march': 'Mars',
+    'april': 'Avril',
+    'may': 'Mai',
+    'june': 'Juin',
+    'july': 'Juillet',
+    'august': 'Août',
+    'september': 'Septembre',
+    'october': 'Octobre',
+    'november': 'Novembre',
+    'december': 'Décembre',
+    
+    // User Interface
+    'save': 'Enregistrer',
+    'cancel': 'Annuler',
+    'edit': 'Modifier',
+    'delete': 'Supprimer',
+    'add': 'Ajouter',
+    'create': 'Créer',
+    'update': 'Mettre à jour',
+    'refresh': 'Actualiser',
+    'export': 'Exporter',
+    'import': 'Importer',
+    'download': 'Télécharger',
+    'upload': 'Téléverser',
+    'share': 'Partager',
+    'print': 'Imprimer',
+    'copy': 'Copier',
+    'paste': 'Coller',
+    'cut': 'Couper',
+    'undo': 'Annuler',
+    'redo': 'Refaire',
+    'select_all': 'Tout sélectionner',
+    'clear': 'Effacer',
+    'reset': 'Réinitialiser',
+    'apply': 'Appliquer',
+    'confirm': 'Confirmer',
+    'close': 'Fermer',
+    'open': 'Ouvrir',
+    'expand': 'Développer',
+    'collapse': 'Réduire',
+    'show': 'Afficher',
+    'hide': 'Masquer',
+    'enable': 'Activer',
+    'disable': 'Désactiver',
+    'loading': 'Chargement...',
+    'please_wait': 'Veuillez patienter...',
+    'processing': 'Traitement en cours...',
+    'completed': 'Terminé',
+    'failed': 'Échec',
+    'success': 'Succès',
+    'error': 'Erreur',
+    'warning': 'Avertissement',
+    'info': 'Information',
+    
+    // Forms & Validation
+    'required_field': 'Champ obligatoire',
+    'invalid_email': 'Adresse email invalide',
+    'password_too_short': 'Mot de passe trop court',
+    'passwords_dont_match': 'Les mots de passe ne correspondent pas',
+    'invalid_phone': 'Numéro de téléphone invalide',
+    'invalid_date': 'Date invalide',
+    'invalid_number': 'Nombre invalide',
+    'field_too_long': 'Champ trop long',
+    'field_too_short': 'Champ trop court',
+    'please_select': 'Veuillez sélectionner',
+    'no_results': 'Aucun résultat',
+    'no_data': 'Aucune donnée disponible',
+    
+    // Authentication
+    'sign_in': 'Se connecter',
+    'sign_up': 'S\'inscrire',
+    'sign_out': 'Se déconnecter',
+    'forgot_password': 'Mot de passe oublié ?',
+    'reset_password': 'Réinitialiser le mot de passe',
+    'change_password': 'Changer le mot de passe',
+    'current_password': 'Mot de passe actuel',
+    'new_password': 'Nouveau mot de passe',
+    'confirm_password': 'Confirmer le mot de passe',
+    'email': 'Email',
+    'password': 'Mot de passe',
+    'username': 'Nom d\'utilisateur',
+    'full_name': 'Nom complet',
+    'first_name': 'Prénom',
+    'last_name': 'Nom de famille',
+    'phone': 'Téléphone',
+    'address': 'Adresse',
+    'city': 'Ville',
+    'country': 'Pays',
+    'organization': 'Organisation',
+    'role': 'Rôle',
+    'permissions': 'Permissions',
+    'account': 'Compte',
+    'profile_settings': 'Paramètres du profil',
+    'privacy_settings': 'Paramètres de confidentialité',
+    'notification_settings': 'Paramètres de notification',
+    
+    // About & Information
+    'about_title': 'À propos du Géoportail Niger',
+    'about_mission': 'Notre Mission',
+    'about_mission_text': 'Démocratiser l\'accès aux données publiques du Niger pour favoriser la transparence, l\'innovation et le développement participatif à travers une plateforme intelligente et accessible.',
+    'about_vision': 'Notre Vision',
+    'about_vision_text': 'Devenir la référence en matière de données géospatiales ouvertes au Niger et contribuer au développement durable du pays.',
+    'about_values': 'Nos Valeurs',
+    'transparency': 'Transparence',
+    'innovation': 'Innovation',
+    'collaboration': 'Collaboration',
+    'accessibility': 'Accessibilité',
+    'sustainability': 'Durabilité',
+    'contact_us': 'Nous contacter',
+    'support': 'Support',
+    'documentation': 'Documentation',
+    'faq': 'Questions fréquentes',
+    'terms_of_service': 'Conditions d\'utilisation',
+    'privacy_policy': 'Politique de confidentialité',
+    'copyright': 'Droits d\'auteur',
+    'version': 'Version',
+    'last_updated': 'Dernière mise à jour',
+    
+    // AI Assistant
+    'ai_assistant': 'Assistant IA',
+    'ask_question': 'Posez votre question...',
+    'ai_thinking': 'L\'IA réfléchit...',
+    'ai_response': 'Réponse de l\'IA',
+    'ai_suggestions': 'Suggestions',
+    'ai_help': 'Comment puis-je vous aider ?',
+    'voice_input': 'Saisie vocale',
+    'voice_output': 'Sortie vocale',
+    'clear_conversation': 'Effacer la conversation',
+    'conversation_history': 'Historique des conversations',
+    
+    // Status & States
+    'online': 'En ligne',
+    'offline': 'Hors ligne',
+    'connected': 'Connecté',
+    'disconnected': 'Déconnecté',
+    'active': 'Actif',
+    'inactive': 'Inactif',
+    'available': 'Disponible',
+    'unavailable': 'Indisponible',
+    'public': 'Public',
+    'private': 'Privé',
+    'draft': 'Brouillon',
+    'published': 'Publié',
+    'archived': 'Archivé',
+    'pending': 'En attente',
+    'approved': 'Approuvé',
+    'rejected': 'Rejeté',
+    'in_progress': 'En cours',
+    'completed': 'Terminé',
+    'cancelled': 'Annulé',
+    
+    // Priority & Urgency
+    'priority': 'Priorité',
+    'high_priority': 'Priorité élevée',
+    'medium_priority': 'Priorité moyenne',
+    'low_priority': 'Priorité faible',
+    'urgent': 'Urgent',
+    'important': 'Important',
+    'critical': 'Critique',
+    'normal': 'Normal',
+    
+    // Development & Technical
+    'developed_regions': 'Régions Développées',
+    'developing_regions': 'Régions en Développement',
+    'priority_regions': 'Régions Prioritaires',
+    'infrastructure_score': 'Score d\'Infrastructure',
+    'development_score': 'Score de Développement',
+    'priority_score': 'Score de Priorité',
+    'data_quality': 'Qualité des Données',
+    'data_source': 'Source des Données',
+    'last_sync': 'Dernière synchronisation',
+    'api_status': 'Statut de l\'API',
+    'system_health': 'Santé du Système',
+    
+    // Regional Specific
+    'niamey': 'Niamey',
+    'agadez': 'Agadez',
+    'diffa': 'Diffa',
+    'dosso': 'Dosso',
+    'maradi': 'Maradi',
+    'tahoua': 'Tahoua',
+    'tillaberi': 'Tillabéri',
+    'zinder': 'Zinder',
+    
+    // Cultural & Social
+    'culture': 'Culture',
+    'tradition': 'Tradition',
+    'language': 'Langue',
+    'community': 'Communauté',
+    'society': 'Société',
+    'heritage': 'Patrimoine',
+    'festival': 'Festival',
+    'ceremony': 'Cérémonie',
+    'custom': 'Coutume',
+    'belief': 'Croyance',
+    
+    // Economic
+    'economy': 'Économie',
+    'agriculture': 'Agriculture',
+    'livestock': 'Élevage',
+    'mining': 'Mines',
+    'industry': 'Industrie',
+    'commerce': 'Commerce',
+    'tourism': 'Tourisme',
+    'employment': 'Emploi',
+    'income': 'Revenu',
+    'poverty': 'Pauvreté',
+    'gdp': 'PIB',
+    'budget': 'Budget',
+    'investment': 'Investissement',
+    'development': 'Développement',
+    
+    // Environmental
+    'environment': 'Environnement',
+    'climate_change': 'Changement climatique',
+    'drought': 'Sécheresse',
+    'flood': 'Inondation',
+    'desertification': 'Désertification',
+    'biodiversity': 'Biodiversité',
+    'conservation': 'Conservation',
+    'renewable_energy': 'Énergie renouvelable',
+    'sustainability': 'Durabilité',
+    'pollution': 'Pollution',
+    'waste_management': 'Gestion des déchets',
+    
+    // Messages & Notifications
+    'welcome_message': 'Bienvenue sur le Géoportail Niger ! Explorez les données ouvertes de notre pays.',
+    'data_updated': 'Les données ont été mises à jour avec succès.',
+    'export_complete': 'L\'exportation est terminée.',
+    'import_complete': 'L\'importation est terminée.',
+    'save_success': 'Enregistrement réussi.',
+    'delete_success': 'Suppression réussie.',
+    'update_success': 'Mise à jour réussie.',
+    'operation_failed': 'L\'opération a échoué.',
+    'network_error': 'Erreur de réseau. Vérifiez votre connexion.',
+    'server_error': 'Erreur du serveur. Veuillez réessayer plus tard.',
+    'unauthorized': 'Accès non autorisé.',
+    'forbidden': 'Accès interdit.',
+    'not_found': 'Ressource non trouvée.',
+    'session_expired': 'Session expirée. Veuillez vous reconnecter.',
+    'maintenance_mode': 'Le système est en maintenance. Veuillez réessayer plus tard.',
   },
-  
+
   ha: {
-    // Navigation (Hausa)
+    // Navigation & Layout (Hausa)
     'dashboard': 'Allon Aiki',
     'map': 'Taswirar Duniya',
     'data': 'Binciken Bayanai',
@@ -49,34 +357,348 @@ export const translations = {
     'about': 'Game da mu',
     'login': 'Shiga',
     'logout': 'Fita',
+    'chat': 'Mai Taimako na AI',
+    'settings': 'Saitunan',
+    'help': 'Taimako',
+    'home': 'Gida',
+    
+    // Header & Navigation
+    'welcome': 'Maraba da zuwan Géoportail na Niger',
+    'subtitle': 'Dandali mai hankali don samun bayanai na jama\'a',
+    'search_placeholder': 'Nemi gari, yanki, ababen more rayuwa...',
+    'search': 'Bincike',
+    'filters': 'Tacewa',
+    'all_categories': 'Duk nau\'i',
+    'toggle_theme': 'Canza kalar',
+    'change_language': 'Canza harshe',
+    'user_menu': 'Menu na mai amfani',
+    'notifications': 'Sanarwa',
     
     // Dashboard
-    'welcome': 'Maraba da zuwan Géoportail na Niger',
-    'subtitle': 'Samun bayanai na jama\'a don ci gaba',
     'total_regions': 'Yankunan Duka',
     'health_facilities': 'Cibiyoyin Lafiya',
     'schools': 'Makarantu',
     'water_points': 'Wuraren Ruwa',
+    'power_stations': 'Cibiyoyin Wutar Lantarki',
+    'population': 'Yawan Jama\'a',
+    'area': 'Yanki',
+    'density': 'Yawan Mutane',
+    'development_index': 'Ma\'aunin Ci Gaba',
     
-    // Search
-    'search_placeholder': 'Nemi gari, yanki ko bayanai...',
-    'search': 'Bincike',
-    'filters': 'Tacewa',
-    'all_categories': 'Duk nau\'i',
+    // Access Indicators
+    'education_access': 'Samun Ilimi',
+    'health_access': 'Samun Lafiya',
+    'water_access': 'Samun Ruwan Sha',
+    'electricity_access': 'Samun Wutar Lantarki',
+    'internet_access': 'Samun Intanet',
+    'road_access': 'Samun Hanya',
     
-    // User
-    'welcome_user': 'Maraba',
-    'toggle_theme': 'Canza kalar',
-    'change_language': 'Canza harshe',
+    // Map & Geography
+    'regions': 'Yankuna',
+    'departments': 'Larduna',
+    'communes': 'Karamar Hukuma',
+    'villages': 'Ƙauyuka',
+    'capital': 'Babban Birni',
+    'urban_area': 'Yankin Birni',
+    'rural_area': 'Yankin Karkara',
+    'coordinates': 'Alamun Wuri',
+    'elevation': 'Tsayin Wuri',
+    'climate': 'Yanayi',
     
-    // About
+    // Infrastructure Types
+    'hospital': 'Asibiti',
+    'health_center': 'Cibiyar Lafiya',
+    'clinic': 'Klinik',
+    'pharmacy': 'Kantin Magani',
+    'university': 'Jami\'a',
+    'secondary_school': 'Makarantar Sakandare',
+    'primary_school': 'Makarantar Firamare',
+    'technical_school': 'Makarantar Fasaha',
+    'river': 'Kogi',
+    'borehole': 'Rijiyar Injin',
+    'well': 'Rijiya',
+    'dam': 'Madatsar Ruwa',
+    'power_plant': 'Cibiyar Wutar Lantarki',
+    'solar_farm': 'Gonar Hasken Rana',
+    'wind_farm': 'Gonar Iska',
+    'road': 'Hanya',
+    'bridge': 'Gada',
+    'airport': 'Filin Jirgin Sama',
+    'market': 'Kasuwa',
+    
+    // Data & Statistics
+    'statistics': 'Kididdiga',
+    'indicators': 'Alamomi',
+    'trends': 'Yanayin Canje-canje',
+    'analysis': 'Bincike',
+    'comparison': 'Kwatanta',
+    'ranking': 'Jera',
+    'evolution': 'Ci Gaba',
+    'projection': 'Hasashe',
+    'correlation': 'Dangantaka',
+    'average': 'Matsakaici',
+    'median': 'Tsakiya',
+    'minimum': 'Mafi Ƙanƙanta',
+    'maximum': 'Mafi Girma',
+    'percentage': 'Kashi Dari',
+    'growth_rate': 'Adadin Girma',
+    
+    // Time & Dates
+    'today': 'Yau',
+    'yesterday': 'Jiya',
+    'this_week': 'Wannan Mako',
+    'this_month': 'Wannan Wata',
+    'this_year': 'Wannan Shekara',
+    'last_week': 'Makon da ya wuce',
+    'last_month': 'Watan da ya wuce',
+    'last_year': 'Shekarar da ta wuce',
+    'january': 'Janairu',
+    'february': 'Fabrairu',
+    'march': 'Maris',
+    'april': 'Afirilu',
+    'may': 'Mayu',
+    'june': 'Yuni',
+    'july': 'Yuli',
+    'august': 'Agusta',
+    'september': 'Satumba',
+    'october': 'Oktoba',
+    'november': 'Nuwamba',
+    'december': 'Disamba',
+    
+    // User Interface
+    'save': 'Ajiye',
+    'cancel': 'Soke',
+    'edit': 'Gyara',
+    'delete': 'Share',
+    'add': 'Ƙara',
+    'create': 'Kirkira',
+    'update': 'Sabunta',
+    'refresh': 'Sake Sabunta',
+    'export': 'Fitar da',
+    'import': 'Shigo da',
+    'download': 'Sauke',
+    'upload': 'Loda',
+    'share': 'Raba',
+    'print': 'Buga',
+    'copy': 'Kwafi',
+    'paste': 'Manna',
+    'cut': 'Yanke',
+    'undo': 'Mayar da baya',
+    'redo': 'Sake yi',
+    'select_all': 'Zaɓi duka',
+    'clear': 'Share',
+    'reset': 'Sake saita',
+    'apply': 'Yi amfani',
+    'confirm': 'Tabbatar',
+    'close': 'Rufe',
+    'open': 'Buɗe',
+    'expand': 'Faɗaɗa',
+    'collapse': 'Rage',
+    'show': 'Nuna',
+    'hide': 'Ɓoye',
+    'enable': 'Kunna',
+    'disable': 'Kashe',
+    'loading': 'Ana lodawa...',
+    'please_wait': 'Don Allah ku jira...',
+    'processing': 'Ana aiki...',
+    'completed': 'An gama',
+    'failed': 'Ya gaza',
+    'success': 'Nasara',
+    'error': 'Kuskure',
+    'warning': 'Gargaɗi',
+    'info': 'Bayani',
+    
+    // Forms & Validation
+    'required_field': 'Filin da ake bukata',
+    'invalid_email': 'Adireshin imel ba daidai ba',
+    'password_too_short': 'Kalmar sirri ta yi gajere',
+    'passwords_dont_match': 'Kalmomin sirri ba su dace ba',
+    'invalid_phone': 'Lambar waya ba daidai ba',
+    'invalid_date': 'Kwanan wata ba daidai ba',
+    'invalid_number': 'Lamba ba daidai ba',
+    'field_too_long': 'Filin ya yi tsawo',
+    'field_too_short': 'Filin ya yi gajere',
+    'please_select': 'Don Allah zaɓi',
+    'no_results': 'Babu sakamako',
+    'no_data': 'Babu bayanai',
+    
+    // Authentication
+    'sign_in': 'Shiga',
+    'sign_up': 'Yi rajista',
+    'sign_out': 'Fita',
+    'forgot_password': 'Ka manta da kalmar sirri?',
+    'reset_password': 'Sake saita kalmar sirri',
+    'change_password': 'Canza kalmar sirri',
+    'current_password': 'Kalmar sirrin yanzu',
+    'new_password': 'Sabuwar kalmar sirri',
+    'confirm_password': 'Tabbatar da kalmar sirri',
+    'email': 'Imel',
+    'password': 'Kalmar Sirri',
+    'username': 'Sunan mai amfani',
+    'full_name': 'Cikakken suna',
+    'first_name': 'Suna na farko',
+    'last_name': 'Sunan iyali',
+    'phone': 'Waya',
+    'address': 'Adireshi',
+    'city': 'Birni',
+    'country': 'Ƙasa',
+    'organization': 'Ƙungiya',
+    'role': 'Matsayi',
+    'permissions': 'Izini',
+    'account': 'Asusun',
+    'profile_settings': 'Saitunan bayani',
+    'privacy_settings': 'Saitunan sirri',
+    'notification_settings': 'Saitunan sanarwa',
+    
+    // About & Information
     'about_title': 'Game da Géoportail Niger',
     'about_mission': 'Manufarmu',
-    'about_mission_text': 'Sauƙaƙe samun bayanain gwamnati na Niger don haɓaka gaskiya, ƙirƙira da ci gaban al\'umma.'
+    'about_mission_text': 'Sauƙaƙe samun bayanain gwamnati na Niger don haɓaka gaskiya, ƙirƙira da ci gaban al\'umma ta hanyar dandali mai hankali da samun dama.',
+    'about_vision': 'Hangen Nesanmu',
+    'about_vision_text': 'Zama tushen bayanai na yanki a buɗe a Niger da kuma ba da gudummawa ga ci gaban ƙasa mai dorewa.',
+    'about_values': 'Dabi\'unmu',
+    'transparency': 'Bayyana gaskiya',
+    'innovation': 'Ƙirƙira',
+    'collaboration': 'Haɗin kai',
+    'accessibility': 'Samun dama',
+    'sustainability': 'Dorewa',
+    'contact_us': 'Tuntuɓe mu',
+    'support': 'Tallafi',
+    'documentation': 'Takaddun',
+    'faq': 'Tambayoyin da ake yawan yi',
+    'terms_of_service': 'Sharuɗɗan amfani',
+    'privacy_policy': 'Manufar sirri',
+    'copyright': 'Haƙƙin mallaka',
+    'version': 'Sigar',
+    'last_updated': 'Sabuntawa ta ƙarshe',
+    
+    // AI Assistant
+    'ai_assistant': 'Mai Taimako na AI',
+    'ask_question': 'Yi tambaya...',
+    'ai_thinking': 'AI yana tunani...',
+    'ai_response': 'Amsar AI',
+    'ai_suggestions': 'Shawarwari',
+    'ai_help': 'Ta yaya zan iya taimaka muku?',
+    'voice_input': 'Shigar da murya',
+    'voice_output': 'Fitar da murya',
+    'clear_conversation': 'Share tattaunawa',
+    'conversation_history': 'Tarihin tattaunawa',
+    
+    // Status & States
+    'online': 'A kan layi',
+    'offline': 'Ba a kan layi ba',
+    'connected': 'An haɗa',
+    'disconnected': 'An cire haɗi',
+    'active': 'Mai aiki',
+    'inactive': 'Ba mai aiki ba',
+    'available': 'Akwai',
+    'unavailable': 'Babu',
+    'public': 'Na jama\'a',
+    'private': 'Na sirri',
+    'draft': 'Daftari',
+    'published': 'An buga',
+    'archived': 'An ajiye',
+    'pending': 'Ana jira',
+    'approved': 'An amince',
+    'rejected': 'An ƙi',
+    'in_progress': 'Ana ci gaba',
+    'completed': 'An gama',
+    'cancelled': 'An soke',
+    
+    // Priority & Urgency
+    'priority': 'Fifiko',
+    'high_priority': 'Babban fifiko',
+    'medium_priority': 'Matsakaicin fifiko',
+    'low_priority': 'Ƙaramin fifiko',
+    'urgent': 'Gaggawa',
+    'important': 'Mai muhimmanci',
+    'critical': 'Mai tsanani',
+    'normal': 'Na al\'ada',
+    
+    // Development & Technical
+    'developed_regions': 'Yankunan da suka ci gaba',
+    'developing_regions': 'Yankunan da ke ci gaba',
+    'priority_regions': 'Yankunan fifiko',
+    'infrastructure_score': 'Maki na ababen more rayuwa',
+    'development_score': 'Maki na ci gaba',
+    'priority_score': 'Maki na fifiko',
+    'data_quality': 'Ingancin bayanai',
+    'data_source': 'Tushen bayanai',
+    'last_sync': 'Daidaitawa ta ƙarshe',
+    'api_status': 'Matsayin API',
+    'system_health': 'Lafiyar tsarin',
+    
+    // Regional Specific
+    'niamey': 'Niamey',
+    'agadez': 'Agadez',
+    'diffa': 'Diffa',
+    'dosso': 'Dosso',
+    'maradi': 'Maradi',
+    'tahoua': 'Tahoua',
+    'tillaberi': 'Tillabéri',
+    'zinder': 'Zinder',
+    
+    // Cultural & Social
+    'culture': 'Al\'ada',
+    'tradition': 'Gargajiya',
+    'language': 'Harshe',
+    'community': 'Al\'umma',
+    'society': 'Jama\'a',
+    'heritage': 'Gado',
+    'festival': 'Biki',
+    'ceremony': 'Biki',
+    'custom': 'Al\'ada',
+    'belief': 'Imani',
+    
+    // Economic
+    'economy': 'Tattalin Arziki',
+    'agriculture': 'Noma',
+    'livestock': 'Kiwo',
+    'mining': 'Hakar Ma\'adinai',
+    'industry': 'Masana\'antu',
+    'commerce': 'Kasuwanci',
+    'tourism': 'Yawon shakatawa',
+    'employment': 'Aiki',
+    'income': 'Kudin shiga',
+    'poverty': 'Talauci',
+    'gdp': 'GDP',
+    'budget': 'Kasafin kudi',
+    'investment': 'Saka hannun jari',
+    'development': 'Ci gaba',
+    
+    // Environmental
+    'environment': 'Muhalli',
+    'climate_change': 'Canjin yanayi',
+    'drought': 'Fari',
+    'flood': 'Ambaliya',
+    'desertification': 'Zama hamada',
+    'biodiversity': 'Bambancin halittu',
+    'conservation': 'Kiyayewa',
+    'renewable_energy': 'Makamashi mai sabuntawa',
+    'sustainability': 'Dorewa',
+    'pollution': 'Gurɓata muhalli',
+    'waste_management': 'Sarrafa sharar gida',
+    
+    // Messages & Notifications
+    'welcome_message': 'Maraba da zuwan Géoportail Niger! Binciki bayanai na buɗe na ƙasarmu.',
+    'data_updated': 'An sabunta bayanai cikin nasara.',
+    'export_complete': 'An gama fitarwa.',
+    'import_complete': 'An gama shigowa.',
+    'save_success': 'An yi nasarar ajiyewa.',
+    'delete_success': 'An yi nasarar sharewa.',
+    'update_success': 'An yi nasarar sabuntawa.',
+    'operation_failed': 'Aikin ya gaza.',
+    'network_error': 'Kuskuren hanyar sadarwa. Duba haɗin ku.',
+    'server_error': 'Kuskuren uwar garke. Don Allah sake gwadawa daga baya.',
+    'unauthorized': 'Ba a ba da izini ba.',
+    'forbidden': 'An hana shiga.',
+    'not_found': 'Ba a sami abin da ake nema ba.',
+    'session_expired': 'Lokacin zama ya ƙare. Don Allah sake shiga.',
+    'maintenance_mode': 'Tsarin yana cikin gyara. Don Allah sake gwadawa daga baya.',
   },
-  
+
   dj: {
-    // Navigation (Zarma)
+    // Navigation & Layout (Zarma)
     'dashboard': 'Goyyan Hawgay',
     'map': 'Duniya Bii',
     'data': 'Alhabar Ceeci',
@@ -84,24 +706,476 @@ export const translations = {
     'about': 'Ir game',
     'login': 'Huru',
     'logout': 'Kala',
+    'chat': 'AI Faaba',
+    'settings': 'Teera-teerawey',
+    'help': 'Faaba',
+    'home': 'Goy',
+    
+    // Header & Navigation
+    'welcome': 'Kubay Géoportail Niger ga',
+    'subtitle': 'Goydaari hankuri-ize alhabar žeenante se',
+    'search_placeholder': 'Gaa ceeci, hayaŋ, jinawey...',
+    'search': 'Ceeci',
+    'filters': 'Suuba',
+    'all_categories': 'Jinawey kul',
+    'toggle_theme': 'Nooku barmay',
+    'change_language': 'Šenni barmay',
+    'user_menu': 'Goykey menu',
+    'notifications': 'Alhabarey',
     
     // Dashboard
-    'welcome': 'Kubay Géoportail Niger ga',
-    'subtitle': 'Alhabar žeenante ka daawandiyan se',
     'total_regions': 'Hayawey Kul',
     'health_facilities': 'Deemantey Goykaw',
     'schools': 'Ékol-ey',
     'water_points': 'Hari Hawey',
+    'power_stations': 'Alkabar Goykaw',
+    'population': 'Borey Hinna',
+    'area': 'Hayaŋ',
+    'density': 'Borey Cindi',
+    'development_index': 'Tontoni Šilbay',
     
-    // Search
-    'search_placeholder': 'Gaa ceeci, hayaŋ wala alhabar...',
-    'search': 'Ceeci',
-    'filters': 'Suuba',
-    'all_categories': 'Jinawey kul',
+    // Access Indicators
+    'education_access': 'Cawandi Duu',
+    'health_access': 'Deemante Duu',
+    'water_access': 'Hari Hinne Duu',
+    'electricity_access': 'Alkabar Duu',
+    'internet_access': 'Internet Duu',
+    'road_access': 'Hira Duu',
     
-    // User
-    'welcome_user': 'Kubay',
-    'toggle_theme': 'Nooku barmay',
-    'change_language': 'Šenni barmay'
+    // Map & Geography
+    'regions': 'Hayawey',
+    'departments': 'Departement-ey',
+    'communes': 'Commune-ey',
+    'villages': 'Koyrawey',
+    'capital': 'Beeri Beeri',
+    'urban_area': 'Beeri Hayaŋ',
+    'rural_area': 'Ganda Hayaŋ',
+    'coordinates': 'Goydoo Šilbawey',
+    'elevation': 'Goyyan Kayna',
+    'climate': 'Hawgay',
+    
+    // Infrastructure Types
+    'hospital': 'Deemante Goy Beeri',
+    'health_center': 'Deemante Goy',
+    'clinic': 'Klinik',
+    'pharmacy': 'Hantum Goy',
+    'university': 'Jaamiya',
+    'secondary_school': 'Ékol Beeri',
+    'primary_school': 'Ékol Jinaa',
+    'technical_school': 'Goy-goyyan Ékol',
+    'river': 'Isa',
+    'borehole': 'Foraž',
+    'well': 'Kaabu',
+    'dam': 'Hari Kayandi',
+    'power_plant': 'Alkabar Goy',
+    'solar_farm': 'Atakara Alkabar',
+    'wind_farm': 'Hawey Alkabar',
+    'road': 'Hira',
+    'bridge': 'Tila',
+    'airport': 'Hawakoy Doo',
+    'market': 'Habu',
+    
+    // Data & Statistics
+    'statistics': 'Hinna Šilbawey',
+    'indicators': 'Šilbay Tontoney',
+    'trends': 'Barmayan Hawgay',
+    'analysis': 'Šilbay Ceeci',
+    'comparison': 'Barmay Hawgay',
+    'ranking': 'Jere Hawgay',
+    'evolution': 'Tontoni',
+    'projection': 'Hawgay Šilbay',
+    'correlation': 'Cee Hawgay',
+    'average': 'Taaray',
+    'median': 'Taaray Dumi',
+    'minimum': 'Kacca',
+    'maximum': 'Beeri',
+    'percentage': 'Kul Ga Kacca',
+    'growth_rate': 'Tontoni Hinna',
+    
+    // Time & Dates
+    'today': 'Hõo',
+    'yesterday': 'Bi',
+    'this_week': 'Nd\'Atinni Woo',
+    'this_month': 'Handu Woo',
+    'this_year': 'Jiiri Woo',
+    'last_week': 'Nd\'Atinni Koyra',
+    'last_month': 'Handu Koyra',
+    'last_year': 'Jiiri Koyra',
+    'january': 'Žanwiye',
+    'february': 'Feewiriye',
+    'march': 'Marsi',
+    'april': 'Awiril',
+    'may': 'Me',
+    'june': 'Žuweŋ',
+    'july': 'Žuyye',
+    'august': 'Ut',
+    'september': 'Sektanbur',
+    'october': 'Oktoobar',
+    'november': 'Noowanbur',
+    'december': 'Deesanbur',
+    
+    // User Interface
+    'save': 'Hõndi',
+    'cancel': 'Kaa',
+    'edit': 'Barmay',
+    'delete': 'Tuuri',
+    'add': 'Tonton',
+    'create': 'Tee',
+    'update': 'Taagandi',
+    'refresh': 'Taaga Taagandi',
+    'export': 'Kala Nda',
+    'import': 'Huru Nda',
+    'download': 'Zumandi',
+    'upload': 'Kaabu',
+    'share': 'Žemna',
+    'print': 'Šii',
+    'copy': 'Berandi',
+    'paste': 'Kayandi',
+    'cut': 'Katta',
+    'undo': 'Koyra Willi',
+    'redo': 'Taaga Tee',
+    'select_all': 'Kul Suuba',
+    'clear': 'Hansa',
+    'reset': 'Taaga Tee',
+    'apply': 'Goy',
+    'confirm': 'Taabaatandi',
+    'close': 'Daabu',
+    'open': 'Feeri',
+    'expand': 'Beeri Tee',
+    'collapse': 'Kacca Tee',
+    'show': 'Cebe',
+    'hide': 'Tugu',
+    'enable': 'Huru',
+    'disable': 'Kaa',
+    'loading': 'Goy ra...',
+    'please_wait': 'Hanga...',
+    'processing': 'Goy ra...',
+    'completed': 'A ben',
+    'failed': 'A ši ben',
+    'success': 'Alheri',
+    'error': 'Firka',
+    'warning': 'Yaamar',
+    'info': 'Alhabar',
+    
+    // Forms & Validation
+    'required_field': 'Waažibi šii',
+    'invalid_email': 'Email ši hima',
+    'password_too_short': 'Šenni šii kacca',
+    'passwords_dont_match': 'Šenni šiiwey ši cee',
+    'invalid_phone': 'Telefon lambar ši hima',
+    'invalid_date': 'Zaaman ši hima',
+    'invalid_number': 'Hinna ši hima',
+    'field_too_long': 'Šii kayna',
+    'field_too_short': 'Šii kacca',
+    'please_select': 'Suuba',
+    'no_results': 'Alhaal šii',
+    'no_data': 'Alhabar šii',
+    
+    // Authentication
+    'sign_in': 'Huru',
+    'sign_up': 'Marga Šii',
+    'sign_out': 'Kala',
+    'forgot_password': 'Šenni šii hin bisa?',
+    'reset_password': 'Šenni šii taaga tee',
+    'change_password': 'Šenni šii barmay',
+    'current_password': 'Šenni šii sohõ',
+    'new_password': 'Šenni šii taaga',
+    'confirm_password': 'Šenni šii taabaatandi',
+    'email': 'Email',
+    'password': 'Šenni Šii',
+    'username': 'Goykey maa',
+    'full_name': 'Maa kul',
+    'first_name': 'Maa jinaa',
+    'last_name': 'Maa koraa',
+    'phone': 'Telefon',
+    'address': 'Goydoo',
+    'city': 'Beeri',
+    'country': 'Laama',
+    'organization': 'Žemma',
+    'role': 'Goy',
+    'permissions': 'Noo Hawey',
+    'account': 'Kontu',
+    'profile_settings': 'Taarixi Teera',
+    'privacy_settings': 'Sutura Teera',
+    'notification_settings': 'Alhabar Teera',
+    
+    // About & Information
+    'about_title': 'Géoportail Niger Game',
+    'about_mission': 'Ir Laada',
+    'about_mission_text': 'Niger laama alhabar žeenante duu noorandi ka gaskiya, taagandiri nda borey žemna tontoni faaba.',
+    'about_vision': 'Ir Guna',
+    'about_vision_text': 'Niger ra hayaŋ alhabarey ra tontoni beeri zaa ka laama tontoni faaba.',
+    'about_values': 'Ir Hawey',
+    'transparency': 'Gaskiya',
+    'innovation': 'Taagandiri',
+    'collaboration': 'Žemna Goy',
+    'accessibility': 'Duu Nooroo',
+    'sustainability': 'Cindi Hawgay',
+    'contact_us': 'Ir cee',
+    'support': 'Faaba',
+    'documentation': 'Šiirawey',
+    'faq': 'Hãayan Booboyaŋ',
+    'terms_of_service': 'Goyyan Laadawey',
+    'privacy_policy': 'Sutura Laada',
+    'copyright': 'Šii Noo',
+    'version': 'Dumi',
+    'last_updated': 'Taagandiri Koraa',
+    
+    // AI Assistant
+    'ai_assistant': 'AI Faaba',
+    'ask_question': 'Hãayan foo...',
+    'ai_thinking': 'AI ga hanse...',
+    'ai_response': 'AI Žaabi',
+    'ai_suggestions': 'Yaamarey',
+    'ai_help': 'Mana hin war faaba?',
+    'voice_input': 'Batu Huru',
+    'voice_output': 'Batu Kala',
+    'clear_conversation': 'Kalam Hansa',
+    'conversation_history': 'Kalam Taarixi',
+    
+    // Status & States
+    'online': 'Hira Ra',
+    'offline': 'Hira Bila',
+    'connected': 'Cee',
+    'disconnected': 'Kaa',
+    'active': 'Goy Ra',
+    'inactive': 'Goy Bila',
+    'available': 'Ga Hin',
+    'unavailable': 'Ši Hin',
+    'public': 'Borey Se',
+    'private': 'Sutura',
+    'draft': 'Šii Jinaa',
+    'published': 'A Šii',
+    'archived': 'A Hõndi',
+    'pending': 'Hanga Ra',
+    'approved': 'A Taabaatandi',
+    'rejected': 'A Kaa',
+    'in_progress': 'Goy Ra',
+    'completed': 'A Ben',
+    'cancelled': 'A Kaa',
+    
+    // Priority & Urgency
+    'priority': 'Jinaa Hawgay',
+    'high_priority': 'Jinaa Beeri',
+    'medium_priority': 'Jinaa Taaray',
+    'low_priority': 'Jinaa Kacca',
+    'urgent': 'Cahãa',
+    'important': 'Muhimma',
+    'critical': 'Baani',
+    'normal': 'Hawgay Cimi',
+    
+    // Development & Technical
+    'developed_regions': 'Hayawey Tontonante',
+    'developing_regions': 'Hayawey Tontoni Ra',
+    'priority_regions': 'Hayawey Jinaa',
+    'infrastructure_score': 'Jinawey Šilbay',
+    'development_score': 'Tontoni Šilbay',
+    'priority_score': 'Jinaa Šilbay',
+    'data_quality': 'Alhabar Hima',
+    'data_source': 'Alhabar Šoori',
+    'last_sync': 'Cee Koraa',
+    'api_status': 'API Hawgay',
+    'system_health': 'Dabari Hima',
+    
+    // Regional Specific
+    'niamey': 'Niamey',
+    'agadez': 'Agadez',
+    'diffa': 'Diffa',
+    'dosso': 'Dosso',
+    'maradi': 'Maradi',
+    'tahoua': 'Tahoua',
+    'tillaberi': 'Tillabéri',
+    'zinder': 'Zinder',
+    
+    // Cultural & Social
+    'culture': 'Laada',
+    'tradition': 'Laada Koyra',
+    'language': 'Šenni',
+    'community': 'Žemma',
+    'society': 'Borey Žemma',
+    'heritage': 'Baba Hawey',
+    'festival': 'Yaabu',
+    'ceremony': 'Yaabu',
+    'custom': 'Laada',
+    'belief': 'Bine',
+    
+    // Economic
+    'economy': 'Alkawal',
+    'agriculture': 'Goy',
+    'livestock': 'Hayni',
+    'mining': 'Taarey Duu',
+    'industry': 'Goy-goyyan',
+    'commerce': 'Alkawal',
+    'tourism': 'Kala-kala',
+    'employment': 'Goy',
+    'income': 'Alkawal Duu',
+    'poverty': 'Hãa',
+    'gdp': 'GDP',
+    'budget': 'Alkawal Šilbay',
+    'investment': 'Alkawal Kayandi',
+    'development': 'Tontoni',
+    
+    // Environmental
+    'environment': 'Duniya',
+    'climate_change': 'Hawgay Barmay',
+    'drought': 'Kaaray',
+    'flood': 'Hari Beeri',
+    'desertification': 'Hankuri Zaa',
+    'biodiversity': 'Alhayawey Cindi',
+    'conservation': 'Hõndi',
+    'renewable_energy': 'Alkabar Taagante',
+    'sustainability': 'Cindi Hawgay',
+    'pollution': 'Duniya Bana',
+    'waste_management': 'Kaaray Dabari',
+    
+    // Messages & Notifications
+    'welcome_message': 'Kubay Géoportail Niger ga! Ir laama alhabar žeenantey ceeci.',
+    'data_updated': 'Alhabarey taagandi nda alheri.',
+    'export_complete': 'Kala nda a ben.',
+    'import_complete': 'Huru nda a ben.',
+    'save_success': 'Hõndi nda alheri.',
+    'delete_success': 'Tuuri nda alheri.',
+    'update_success': 'Taagandi nda alheri.',
+    'operation_failed': 'Goy a ši ben.',
+    'network_error': 'Hira firka. War ceeciyan šii guna.',
+    'server_error': 'Server firka. Taaga šii.',
+    'unauthorized': 'Noo šii.',
+    'forbidden': 'Huru kaa.',
+    'not_found': 'Ši duwandi.',
+    'session_expired': 'Waati a ben. Taaga huru.',
+    'maintenance_mode': 'Dabari teera ra. Taaga šii.',
   }
 };
+
+// Fonction pour obtenir la traduction avec fallback intelligent
+export const getTranslation = (key, language = 'fr', fallbackLanguage = 'fr') => {
+  // Essayer d'abord la langue demandée
+  if (translations[language] && translations[language][key]) {
+    return translations[language][key];
+  }
+  
+  // Fallback vers la langue de secours
+  if (translations[fallbackLanguage] && translations[fallbackLanguage][key]) {
+    return translations[fallbackLanguage][key];
+  }
+  
+  // Si aucune traduction n'est trouvée, retourner la clé
+  return key;
+};
+
+// Fonction pour détecter la langue du navigateur
+export const detectBrowserLanguage = () => {
+  const browserLang = navigator.language || navigator.userLanguage;
+  
+  // Mapping des codes de langue du navigateur vers nos langues supportées
+  const languageMap = {
+    'fr': 'fr',
+    'fr-FR': 'fr',
+    'fr-CA': 'fr',
+    'ha': 'ha',
+    'ha-NG': 'ha',
+    'dj': 'dj',
+    'en': 'fr', // Fallback vers français pour l'anglais
+    'en-US': 'fr',
+    'en-GB': 'fr'
+  };
+  
+  return languageMap[browserLang] || languageMap[browserLang.split('-')[0]] || 'fr';
+};
+
+// Fonction pour formater les nombres selon la langue
+export const formatNumber = (number, language = 'fr') => {
+  const localeMap = {
+    'fr': 'fr-FR',
+    'ha': 'ha-NG',
+    'dj': 'fr-FR' // Utiliser le format français pour Zarma
+  };
+  
+  try {
+    return new Intl.NumberFormat(localeMap[language] || 'fr-FR').format(number);
+  } catch (error) {
+    return number.toString();
+  }
+};
+
+// Fonction pour formater les dates selon la langue
+export const formatDate = (date, language = 'fr', options = {}) => {
+  const localeMap = {
+    'fr': 'fr-FR',
+    'ha': 'ha-NG',
+    'dj': 'fr-FR' // Utiliser le format français pour Zarma
+  };
+  
+  const defaultOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    ...options
+  };
+  
+  try {
+    return new Intl.DateTimeFormat(localeMap[language] || 'fr-FR', defaultOptions).format(new Date(date));
+  } catch (error) {
+    return date.toString();
+  }
+};
+
+// Fonction pour obtenir les métadonnées de langue
+export const getLanguageMetadata = (language) => {
+  const metadata = {
+    'fr': {
+      name: 'Français',
+      nativeName: 'Français',
+      flag: '🇫🇷',
+      direction: 'ltr',
+      region: 'France',
+      speakers: '280 millions'
+    },
+    'ha': {
+      name: 'Hausa',
+      nativeName: 'Harshen Hausa',
+      flag: '🇳🇪',
+      direction: 'ltr',
+      region: 'Niger, Nigeria',
+      speakers: '70 millions'
+    },
+    'dj': {
+      name: 'Zarma',
+      nativeName: 'Zarma Ciine',
+      flag: '🇳🇪',
+      direction: 'ltr',
+      region: 'Niger',
+      speakers: '5 millions'
+    }
+  };
+  
+  return metadata[language] || metadata['fr'];
+};
+
+// Fonction pour valider si une langue est supportée
+export const isSupportedLanguage = (language) => {
+  return Object.keys(translations).includes(language);
+};
+
+// Fonction pour obtenir toutes les langues supportées
+export const getSupportedLanguages = () => {
+  return Object.keys(translations).map(lang => ({
+    code: lang,
+    ...getLanguageMetadata(lang)
+  }));
+};
+
+// Fonction pour interpoler des variables dans les traductions
+export const interpolateTranslation = (template, variables = {}) => {
+  return template.replace(/\{\{(\w+)\}\}/g, (match, key) => {
+    return variables[key] !== undefined ? variables[key] : match;
+  });
+};
+
+// Fonction pour obtenir les traductions plurielles (si nécessaire)
+export const getPluralTranslation = (key, count, language = 'fr') => {
+  const pluralKey = count === 1 ? key : `${key}_plural`;
+  return getTranslation(pluralKey, language) || getTranslation(key, language);
+};
+
+export default translations;
