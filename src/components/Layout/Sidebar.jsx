@@ -12,7 +12,8 @@ const Sidebar = ({ isOpen, onClose }) => {
     { path: '/map', icon: Map, label: t('map') },
     { path: '/data', icon: Database, label: t('data') },
     { path: '/profile', icon: User, label: t('profile') },
-    { path: '/about', icon: Info, label: t('about') }
+    { path: '/about', icon: Info, label: t('about') },
+    { path: '/Chat', icon: BarChart3, label: t('Chat') }
   ];
 
   return (
@@ -27,7 +28,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 transform transition-transform duration-300 z-50 lg:relative lg:translate-x-0 lg:top-0 lg:h-[calc(100vh-4rem)] ${
+        className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-84 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 transform transition-transform duration-300 z-50 lg:relative lg:translate-x-0 lg:top-0 lg:h-[calc(100vh-4rem)] ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

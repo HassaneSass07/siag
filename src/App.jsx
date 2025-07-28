@@ -12,9 +12,12 @@ import { AuthProvider } from './contexts/AuthContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import './App.css';
+import Chatbot from './pages/Chatbot';
+
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
 
   return (
     <ThemeProvider>
@@ -33,6 +36,7 @@ function App() {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path='/chat' element={<Chatbot />} />
                   </Routes>
                 </main>
               </div>
